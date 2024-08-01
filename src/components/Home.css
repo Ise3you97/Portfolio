@@ -1,0 +1,49 @@
+/* src/components/Home.css */
+.home-container {
+  height: 100vh;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  width: 90%; /* Ajusta el ancho según tus necesidades */
+  height: 80vh; /* Ajusta la altura según tus necesidades */
+  margin: 0 auto; /* Centra horizontalmente el div dentro del contenedor */
+}
+
+.row {
+  width: 100%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.carousel-control-next{
+  top: 20%;
+}
+.carousel-control-prev {
+  top: 20%; /* Centra verticalmente */
+}
+.carousel-container {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 600px; /* Ajusta la altura según tu necesidad */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}

@@ -1,0 +1,42 @@
+/* src/components/Navigation.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 1.5rem; /* Ajusta el tamaño del texto según tus necesidades */
+  margin-right: 35px;
+  position: relative;
+  color: #ffffff; /* Cambia el color de los enlaces a blanco para contraste sobre el fondo negro */
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; /* Ajusta la altura de la barra según tu preferencia */
+  background-color: #fcba04; /* Cambia el color de la barra a blanco para contraste sobre el fondo negro */
+  position: absolute;
+  bottom: -5px; /* Ajusta la posición de la barra según tu diseño */
+  left: 0;
+}
+.portafolio-title{
+  font-weight: bold;
+  font-size: 2rem; /* Ajusta el tamaño del texto según tus necesidades */
+  color: #000000; /* Cambia el color del texto a blanco para contraste sobre el fondo negro */
+}
+body {
+  padding-top: 0px; /* Ajusta este valor según la altura de tu navbar para evitar que el contenido quede oculto debajo de la barra de navegación */
+}

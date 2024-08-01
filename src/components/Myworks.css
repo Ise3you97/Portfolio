@@ -1,0 +1,214 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Container that will hold the animation effect */
+.animate-cards .card-back {
+  animation: slideBack 2s forwards;
+}
+
+.animate-cards .card-2 {
+  animation: slideCard2 2s forwards;
+}
+
+.animate-cards .card-3 {
+  animation: slideCard3 2s forwards;
+}
+
+/* Animation keyframes */
+@keyframes slideBack {
+  from {
+    transform: translateX(10px) translateY(10px);
+  }
+  to {
+    transform: translateX(340px) translateY(50px);
+  }
+}
+
+@keyframes slideCard2 {
+  from {
+    transform: translateX(20px) translateY(20px);
+  }
+  to {
+    transform: translateX(680px) translateY(100px);
+  }
+}
+
+@keyframes slideCard3 {
+  from {
+    transform: translateX(30px) translateY(30px);
+  }
+  to {
+    transform: translateX(1020px) translateY(150px);
+  }
+}
+
+.card-container {
+  position: relative; /* Para que las tarjetas se posicionen en relación a este contenedor */
+}
+
+.card {
+  width: 300px; /* Tamaño de la tarjeta */
+  height: 500px; /* Tamaño de la tarjeta */
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: #030303; /* Color del texto */
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  background: linear-gradient(135deg, #b3e5fc, #81d4fa); /* Degradado pastel azul claro */
+  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.card img {
+  position: absolute;
+  top: 60px; /* Ajusta esta distancia si es necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Ajusta el tamaño de la imagen */
+  height: 150px;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0;
+  border: 5px solid #f8f8f8;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover img {
+  opacity: 1;
+}
+.card:hover .card-icon{
+  opacity: 0;
+}
+/* Estilo del ícono en la tarjeta */
+.card-icon {
+  font-size: 7em; /* Ajusta el tamaño del ícono */
+  color: white; /* Color del ícono */
+  margin-bottom: 20px; /* Espacio entre el ícono y el texto */
+  transition: 0.3s ease-in-out;
+}
+.card-icon-front{
+  font-size: 7em; /* Ajusta el tamaño del ícono */
+  color: white; /* Color del ícono */
+  margin-bottom: 20px; /* Espacio entre el ícono y el texto */
+}
+.card h2 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #080808; /* Color del texto */
+  text-decoration: underline; /* Agrega el subrayado */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra debajo del subrayado */
+
+}
+
+.card p, .card a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  inset: auto auto 80px 30px;
+  transition: opacity 0.3s ease-out;
+  
+}
+
+.card p {
+  inset: auto auto 80px 30px;
+  color: #161616; /* Color del texto */
+  text-align: left;
+  font-size: 90%;
+}
+
+.card a {
+  inset: auto auto 40px 30px;
+  color: inherit;
+  text-decoration: none;
+  text-decoration: underline; /* Agrega el subrayado */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra debajo del subrayado */
+}
+
+.card:hover h2 {
+  inset: auto auto 220px 30px;
+  transition: inset 0.3s ease-out;
+}
+
+.card:hover p, .card:hover a,.card:hover img {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+
+.card-back {
+  position: absolute; /* Permite que la tarjeta se coloque detrás de la tarjeta secundaria */
+  background: linear-gradient(135deg, #b3e5fc, #81d4fa); /* Degradado pastel azul claro */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
+  border: 5px solid #000000; /* Borde */
+}
+
+.card-2 {
+  position: absolute; /* Permite que esta tarjeta se coloque detrás de la tarjeta frontal pero delante de la tarjeta de fondo */
+  background: linear-gradient(135deg, #b3e5fc, #81d4fa); /* Degradado pastel azul claro */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
+  border: 5px solid #000000; /* Borde */
+}
+
+.card-3 {
+  position: absolute; /* Permite que esta tarjeta se coloque detrás de la tarjeta frontal pero delante de la tarjeta de fondo */
+  background: linear-gradient(135deg, #b3e5fc, #81d4fa); /* Degradado pastel azul claro */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
+  border: 5px solid #000000; /* Borde */
+}
+
+.card-front {
+  position: relative; /* Permite que la tarjeta frontal se coloque sobre las otras */
+  z-index: 5; /* Asegura que esta tarjeta esté al frente */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
+  border: 5px solid #000000; /* Borde */
+}
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+/* Optional: If you want to animate cards only when the section is visible */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-cards {
+  animation: fadeIn 1s ease-out;
+}
+
+.card-icon-top-left,
+.card-icon-bottom-right {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #333;
+}
+.card-icon-top-left
+ {
+  top: 10px;
+  left: 10px;
+}
+.card-icon-bottom-right
+{
+   bottom: 10px;
+  right: 10px;
+}

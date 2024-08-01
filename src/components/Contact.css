@@ -1,0 +1,112 @@
+.contact-container {
+  display: flex;
+  flex-direction: row; /* Change to row to align items horizontally */
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Reduce height to make space for Buttonsbar */
+  perspective: 1000px; /* Manage the perspective of the container */
+}
+
+.contact-flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 450px;
+  perspective: 1000px;
+  position: relative;
+  z-index: 5; /* Ensures flip-card is above the background */
+  transform-style: preserve-3d; /* Ensures 3D rotation effect */
+  transition: transform 0.3s ease; /* Smooth transition on cursor move */
+  margin: 0 20px; /* Add margin to create space between cards */
+}
+
+.contact-flip-card-inner {
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-flip-card:hover .contact-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.contact-flip-card-front, .contact-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f9c0c0, #f5a3a3); /* Pastel pink gradient */
+  backdrop-filter: blur(10px);
+}
+
+.contact-flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #000000; /* Add border */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
+}
+
+.contact-flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border: 5px solid #000000; /* Add border */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
+  padding: 20px;
+}
+
+.contact-img {
+  width: 200px;
+  height: auto;
+  padding: 1%;
+  border-radius: 50%;
+  margin-bottom: 0px;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.contact-title {
+  font-size: 2rem;
+  color: #333;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-flip-card-front .card-icon-top-left,
+.contact-flip-card-back .card-icon-top-left,
+.contact-flip-card-front .card-icon-bottom-right,
+.contact-flip-card-back .card-icon-bottom-right {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contact-flip-card-front .card-icon-top-left,
+.contact-flip-card-back .card-icon-top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.contact-flip-card-front .card-icon-bottom-right,
+.contact-flip-card-back .card-icon-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}

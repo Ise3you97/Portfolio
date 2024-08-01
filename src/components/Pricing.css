@@ -1,0 +1,81 @@
+/* src/components/Pricing.css */
+.pricing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* Alinea horizontalmente */
+  height: 100vh;
+  text-align: center;
+  position: relative; /* Necesario para que z-index funcione correctamente */
+  margin-right: 300px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px; /* Ajusta el padding si es necesario */
+  border: 5px solid #d6d6d1; /* Borde circular */
+ background: #f8aa51;  /* fallback for old browsers */
+  box-shadow: 0 10px 8px rgba(51, 50, 50, 0.1); /* Sombra sutil */
+  width: 450px; /* Tamaño del contenedor */
+  height: 450px; /* Tamaño del contenedor */
+  overflow: hidden; /* Evita desbordamiento */
+  margin: 0 20px; /* Margen horizontal */
+  position: absolute; /* Permite el uso de z-index */
+  transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+.profile-container:nth-child(1) {
+  z-index: 2; /* Contenedor en primer plano */
+ background: #99948f;  /* fallback for old browsers */
+}
+
+.profile-container:nth-child(2) {
+  z-index: 1; /* Contenedor en el fondo */
+ background: #4384e6;  /* fallback for old browsers */
+  margin-left: 100px;
+}
+.profile-container:nth-child(3) {
+  z-index: 0; /* Contenedor en el fondo */
+ background: #a9e0a7;  /* fallback for old browsers */
+  margin-left: 170px; /* Ajusta el margen izquierdo */
+}
+
+
+.profile-container:nth-child(1)  ~  .profile-container:nth-child(2):hover{
+  transition: transform 0.9s ease; /* Añade una transición suave */
+  transform: translateX(300px); /* Desplaza el segundo contenedor hacia la derecha */
+}
+.profile-container:nth-child(2)  ~  .profile-container:nth-child(3):hover{
+  transition: transform 0.9s ease; /* Añade una transición suave */
+  transform: translateX(300px); /* Desplaza el segundo contenedor hacia la derecha */
+}
+.profile-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ecef; /* Color de fondo */
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.profile-phone,
+.profile-email {
+  margin: 5px 0;
+  color: #0e0e0e; /* Color del texto */
+}
