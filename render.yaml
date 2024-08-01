@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: frontend
+    name: client
     env: static
-    staticPublishPath: frontend/build
-    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: client/build
+    buildCommand: cd client && npm install && npm run build
     pullRequestPreviewsEnabled: true
