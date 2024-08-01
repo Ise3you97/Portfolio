@@ -67,8 +67,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
+
 .card img {
   position: absolute;
   top: 60px; /* Ajusta esta distancia si es necesario */
@@ -88,9 +88,11 @@ main {
 .card:hover img {
   opacity: 1;
 }
-.card:hover .card-icon{
+
+.card:hover .card-icon {
   opacity: 0;
 }
+
 /* Estilo del ícono en la tarjeta */
 .card-icon {
   font-size: 7em; /* Ajusta el tamaño del ícono */
@@ -98,11 +100,13 @@ main {
   margin-bottom: 20px; /* Espacio entre el ícono y el texto */
   transition: 0.3s ease-in-out;
 }
-.card-icon-front{
+
+.card-icon-front {
   font-size: 7em; /* Ajusta el tamaño del ícono */
   color: white; /* Color del ícono */
   margin-bottom: 20px; /* Espacio entre el ícono y el texto */
 }
+
 .card h2 {
   position: absolute;
   inset: auto auto 30px 30px;
@@ -114,7 +118,6 @@ main {
   color: #080808; /* Color del texto */
   text-decoration: underline; /* Agrega el subrayado */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra debajo del subrayado */
-
 }
 
 .card p, .card a {
@@ -123,7 +126,6 @@ main {
   max-width: 80%;
   inset: auto auto 80px 30px;
   transition: opacity 0.3s ease-out;
-  
 }
 
 .card p {
@@ -146,7 +148,7 @@ main {
   transition: inset 0.3s ease-out;
 }
 
-.card:hover p, .card:hover a,.card:hover img {
+.card:hover p, .card:hover a, .card:hover img {
   opacity: 1;
   transition: opacity 0.5s 0.1s ease-in;
 }
@@ -178,6 +180,7 @@ main {
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
   border: 5px solid #000000; /* Borde */
 }
+
 .material-symbols-outlined {
   vertical-align: middle;
 }
@@ -202,13 +205,93 @@ main {
   font-size: 1.5rem;
   color: #333;
 }
-.card-icon-top-left
- {
+
+.card-icon-top-left {
   top: 10px;
   left: 10px;
 }
-.card-icon-bottom-right
-{
-   bottom: 10px;
+
+.card-icon-bottom-right {
+  bottom: 10px;
   right: 10px;
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+  .card {
+    width: 250px; /* Reduce el tamaño de la tarjeta */
+    height: 400px; /* Reduce el tamaño de la tarjeta */
+  }
+
+  .card img {
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    height: 120px;
+    top: 30px; /* Ajusta la distancia de la imagen */
+  }
+
+  .card h2 {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  }
+
+  .card p, .card a {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto */
+  }
+
+  .card-icon {
+    font-size: 5em; /* Ajusta el tamaño del ícono */
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+    width: 275px; /* Ajusta el tamaño de la tarjeta */
+    height: 450px; /* Ajusta el tamaño de la tarjeta */
+  }
+
+  .card img {
+    width: 140px; /* Ajusta el tamaño de la imagen */
+    height: 140px;
+    top: 45px; /* Ajusta la distancia de la imagen */
+  }
+
+  .card h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  }
+
+  .card p, .card a {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  }
+
+  .card-icon {
+    font-size: 6em; /* Ajusta el tamaño del ícono */
+  }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+  .card {
+    width: 300px; /* Tamaño de la tarjeta */
+    height: 500px; /* Tamaño de la tarjeta */
+  }
+
+  .card img {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px;
+    top: 60px; /* Distancia de la imagen */
+  }
+
+  .card h2 {
+    font-size: 1.8rem; /* Ajusta el tamaño del texto */
+  }
+
+  .card p, .card a {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .card-icon {
+    font-size: 7em; /* Ajusta el tamaño del ícono */
+  }
 }

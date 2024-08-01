@@ -7,7 +7,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
  * Permite al usuario ver la información de contacto en la parte posterior de la tarjeta.
  */
 function Contact() {
-
   return (
     <div id="contact" className="contact-container">
       {/* Tarjeta de contacto con efecto de flip */}
@@ -28,11 +27,13 @@ function Contact() {
             <i className="bi bi-suit-club-fill card-icon-top-left"></i>
             <i className="bi bi-suit-club-fill card-icon-bottom-right"></i>
             <h1 className="contact-title">
-              Si quieres contactarme puedes hacerlo
+              If you want to contact me, you can do so.
             </h1>
-            <p className="contact-description">
-              📞 Phone: <strong>+593 963828002</strong><br />
-              ✉️ Email: <strong>Kelvinsolano566@gmail.com</strong>
+            <p>
+              <strong>Phone:</strong> +593 963828002
+            </p>
+            <p>
+              <strong>Email:</strong> Kelvinsolano566@gmail.com
             </p>
           </div>
         </div>

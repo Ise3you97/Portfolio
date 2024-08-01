@@ -218,7 +218,7 @@ function About() {
             <i className="bi bi-gear-fill card-icon"></i>
           </div>
           <div className="about-flip-card-back">
-            <h1>Skills</h1>
+            <h1><strong>SKILLS</strong></h1>
             <ul>
               <li>
                 <strong>Web Development:</strong> API migration, responsive interface design and development, code debugging and optimization.
@@ -235,9 +235,7 @@ function About() {
               <li>
                 <strong>3D Modeling:</strong> Creation of assets for games and interactive applications.
               </li>
-              <li>
-                <strong>UI/UX:</strong> Designing user-friendly and user-centered interfaces.
-              </li>
+             
             </ul>
           </div>
         </div>
