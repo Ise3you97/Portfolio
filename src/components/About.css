@@ -207,7 +207,7 @@
 }
 
 /* Para teléfonos móviles */
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   .about-flip-card {
     max-width: 200px; /* Reduce aún más el ancho máximo de las tarjetas */
     height: 400px; /* Reduce la altura de las tarjetas */

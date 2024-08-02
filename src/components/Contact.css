@@ -1,24 +1,26 @@
 .contact-container {
   display: flex;
-  flex-direction: row; /* Change to row to align items horizontally */
+  flex-direction: row; /* Alinea los elementos horizontalmente */
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 60px); /* Reduce height to make space for Buttonsbar */
-  perspective: 1000px; /* Manage the perspective of the container */
+  height: calc(100vh - 60px); /* Reduce la altura para hacer espacio para el Buttonsbar */
+  perspective: 1000px; /* Maneja la perspectiva del contenedor */
 }
 
+/* Estilo general de las tarjetas flip */
 .contact-flip-card {
   background-color: transparent;
   width: 310px;
   height: 450px;
   perspective: 1000px;
   position: relative;
-  z-index: 5; /* Ensures flip-card is above the background */
-  transform-style: preserve-3d; /* Ensures 3D rotation effect */
-  transition: transform 0.3s ease; /* Smooth transition on cursor move */
-  margin: 0 20px; /* Add margin to create space between cards */
+  z-index: 5; /* Asegura que la tarjeta flip esté encima del fondo */
+  transform-style: preserve-3d; /* Asegura el efecto de rotación 3D */
+  transition: transform 0.3s ease; /* Transición suave en movimiento del cursor */
+  margin: 0 20px; /* Añade margen para crear espacio entre tarjetas */
 }
 
+/* Estilo interno de la tarjeta flip */
 .contact-flip-card-inner {
   position: relative;
   border-radius: 15px;
@@ -34,14 +36,13 @@
   transform: rotateY(180deg);
 }
 
+/* Estilo del frente y el reverso de la tarjeta flip */
 .contact-flip-card-front, .contact-flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px;
-  background: linear-gradient(135deg, #f9c0c0, #f5a3a3); /* Pastel pink gradient */
-  backdrop-filter: blur(10px);
 }
 
 .contact-flip-card-front {
@@ -49,8 +50,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid #000000; /* Add border */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
+  border: 5px solid #000000; /* Añade borde */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra interior */
+  background: linear-gradient(135deg, #f9c0c0, #f5a3a3); /* Gradiente rosa pastel */
+  backdrop-filter: blur(10px);
 }
 
 .contact-flip-card-back {
@@ -60,16 +63,18 @@
   justify-content: center;
   align-items: flex-start;
   background: #ffffff;
-  border: 5px solid #000000; /* Add border */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
+  border: 5px solid #000000; /* Añade borde */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra interior */
   padding: 20px;
 }
-.contact-flip-card-back p{
+
+.contact-flip-card-back p {
   font-size: 1rem;
   color: #141313;
   line-height: 1.6;
   margin: 5px 0 0 0;
 }
+
 .contact-img {
   width: 200px;
   height: auto;
@@ -79,8 +84,6 @@
   background: hsl(0, 0%, 100%);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
-
-
 
 .contact-title {
   font-size: 2rem;
@@ -108,4 +111,64 @@
 .contact-flip-card-back .card-icon-bottom-right {
   bottom: 10px;
   right: 10px;
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+  .contact-container {
+    flex-direction: column; /* Cambia a columna para alinear las tarjetas verticalmente */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding-top: 90%; /* Ajusta el padding */
+  }
+
+  .contact-flip-card {
+    width: 250px; /* Ajusta el tamaño de la tarjeta */
+    height: 350px; /* Ajusta el tamaño de la tarjeta */
+    margin: 10px 0; /* Ajusta el margen entre tarjetas */
+  }
+
+  .contact-img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+  }
+
+  .contact-title {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .contact-flip-card-front .card-icon-top-left,
+  .contact-flip-card-back .card-icon-top-left,
+  .contact-flip-card-front .card-icon-bottom-right,
+  .contact-flip-card-back .card-icon-bottom-right {
+    font-size: 1.2rem; /* Ajusta el tamaño de los íconos */
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contact-container {
+    flex-direction: row; /* Mantiene la alineación horizontal */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 20px; /* Ajusta el padding */
+  }
+
+  .contact-flip-card {
+    width: 270px; /* Ajusta el tamaño de la tarjeta */
+    height: 400px; /* Ajusta el tamaño de la tarjeta */
+    margin: 15px; /* Ajusta el margen entre tarjetas */
+  }
+
+  .contact-img {
+    width: 180px; /* Ajusta el tamaño de la imagen */
+  }
+
+  .contact-title {
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
+  }
+
+  .contact-flip-card-front .card-icon-top-left,
+  .contact-flip-card-back .card-icon-top-left,
+  .contact-flip-card-front .card-icon-bottom-right,
+  .contact-flip-card-back .card-icon-bottom-right {
+    font-size: 1.4rem; /* Ajusta el tamaño de los íconos */
+  }
 }

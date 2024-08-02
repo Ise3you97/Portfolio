@@ -217,3 +217,54 @@
   padding: auto;
   height: 100vh; /* Ocupa el 100% del alto de la ventana de visualización */
 }
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+  .home-container,
+  .home2-container,
+  .work-container,
+  .contact-container,
+  .about-flip-card-container,
+  .features-container,
+  .bento-container,
+  .pricing-container,
+  .flip-card-container,
+  .area-container {
+    height: auto; /* Ajusta la altura automáticamente en pantallas pequeñas */
+    padding: 30px; /* Ajusta el padding para dispositivos móviles */
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .home-container,
+  .home2-container,
+  .work-container,
+  .contact-container,
+  .about-flip-card-container,
+  .features-container,
+  .bento-container,
+  .pricing-container,
+  .flip-card-container,
+  .area-container {
+    height: auto; /* Ajusta la altura automáticamente en pantallas medianas */
+    padding: 30px; /* Ajusta el padding para dispositivos de tamaño medio */
+  }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+  .home-container,
+  .home2-container,
+  .work-container,
+  .contact-container,
+  .about-flip-card-container,
+  .features-container,
+  .bento-container,
+  .pricing-container,
+  .flip-card-container,
+  .area-container {
+    height: 100vh; /* Mantiene la altura del 100% de la ventana de visualización en pantallas grandes */
+    padding: auto; /* Padding por defecto para pantallas grandes */
+  }
+}
