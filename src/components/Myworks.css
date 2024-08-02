@@ -50,7 +50,6 @@ main {
 
 .card-container {
   position: relative; /* Para que las tarjetas se posicionen en relación a este contenedor */
-  border: 3px solid black;
 }
 
 .card {
@@ -223,8 +222,8 @@ main {
 @media (max-width: 600px) {
   .card {
     margin-top: 10%;
-    width: 180px; /* Reduce el tamaño de la tarjeta */
-    height: 300px; /* Reduce el tamaño de la tarjeta */
+    width: 150px; /* Reduce el tamaño de la tarjeta */
+    height: 260px; /* Reduce el tamaño de la tarjeta */
   }
 
   .card img {
@@ -237,8 +236,11 @@ main {
     font-size: 1rem; /* Ajusta el tamaño del texto */
   }
 
-  .card p, .card a {
-    font-size: 0.8rem; /* Ajusta el tamaño del texto */
+  .card p, .card a , .card h2{
+    font-size: 0.7rem; /* Ajusta el tamaño del texto */
+    color: white;
+    text-align: left;
+    margin: 0px 0px 0px -20px;
   }
 
   .card-icon {
@@ -250,22 +252,37 @@ main {
     animation: none;
   }
   .card-container {
-    height: 120vh;
+    height: 100vh;
   }
  
   .card-back{
-    margin: 40px 10px;
+    margin: 0% 3%;
     transform: translateX(100%) translateY(0%);
   }
   .card-2{
-    margin: 50px 0px;
+    margin: 3% 0px;
     transform: translateX(0%) translateY(100%);
   }
   .card-3{
-    margin: 50px 10px;
+    margin: 3% 3%;
     transform: translateX(100%) translateY(100%);
 
   }
+  .card img {
+    position: absolute;
+    top: 0%; /* Alinea la imagen en la parte superior del contenedor */
+    left: 50%; /* Alinea la imagen a la izquierda del contenedor */
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover; /* Escala la imagen para cubrir el contenedor sin distorsión */
+    border-radius: 0%; /* Asegura que no haya bordes redondeados */
+    opacity: 0;
+    border: 0; /* Elimina cualquier borde */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra si es necesario */
+    transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
+  }
+  
+
 }
 
 /* Para pantallas medianas (tabletas) */
