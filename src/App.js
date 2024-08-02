@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
+    document.title = "PORFOLIO"
   }, []); // Empty dependency array ensures this runs only once
 
   return (
