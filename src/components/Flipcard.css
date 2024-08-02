@@ -1,42 +1,38 @@
-/* Flip card container with margin to adjust the position */
+/* Estilos base */
 .flip-card-container {
-  margin-top: 50px; /* Adjust this value to move the cards further down */
+  margin-top: 50px; 
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
+  gap: 20px; 
 }
 
-/* Basic card style without glass effect */
 .flip-card {
   width: 300px;
   height: 500px;
-  border-radius: 15px; /* Rounded corners */
-  perspective: 1000px; /* 3D effect */
+  border-radius: 15px; 
+  perspective: 1000px; 
   opacity: 0;
   transform: translateY(10px) scale(0.1);
-  transition: opacity 1s ease-out, transform 0.5s ease-out; /* Faster transition */
+  transition: opacity 1s ease-out, transform 0.5s ease-out; 
 }
 
-/* Visible state */
 .flip-card.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* Container for the front and back side with smooth transitions */
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s ease; /* Faster flip transition */
-  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.6s ease; 
+  border-radius: 15px; 
   transform-style: preserve-3d;
 }
 
-/* Flip effect on hover */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -46,98 +42,159 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 5px solid #000000; /* Add border */
-  border-radius: 15px; /* Rounded corners */
-  background: rgba(255, 255, 255, 1); /* Solid background */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
-  -webkit-backface-visibility: hidden; /* Safari */
+  border: 5px solid #000000; 
+  border-radius: 15px; 
+  background: rgba(255, 255, 255, 1); 
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); 
   backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensures no overflow of image */
+  overflow: hidden; 
   flex-direction: column;
-  padding: 20px; /* Add padding to avoid text being too close to the edges */
-  box-sizing: border-box; /* Include padding in the width/height calculation */
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
-/* Ensure images cover the entire card */
 .flip-card-front img,
 .flip-card-back img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 15px; /* Match rounded corners of card */
-  position: absolute; /* Ensures image covers the whole container */
-  top: 0; /* Position the image at the top of the container */
-  left: 0; /* Position the image at the left of the container */
+  object-fit: cover; 
+  border-radius: 15px; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
 }
 
-/* Style the front side with pastel colors */
 .flip-card-1 .flip-card-front {
-  background: linear-gradient(135deg, #b2e5b1, #a3d9a5); /* Pastel green gradient for About Me */
+  background: linear-gradient(135deg, #b2e5b1, #a3d9a5); 
 }
 
 .flip-card-2 .flip-card-front {
-  background: linear-gradient(135deg, #b3c5ff, #a0b1ff); /* Pastel blue gradient */
+  background: linear-gradient(135deg, #b3c5ff, #a0b1ff); 
 }
 
 .flip-card-3 .flip-card-front {
-  background: linear-gradient(135deg, #f9c0c0, #f5a3a3); /* Pastel pink gradient */
+  background: linear-gradient(135deg, #f9c0c0, #f5a3a3); 
 }
 
 .flip-card-4 .flip-card-front {
-  background: linear-gradient(135deg, #f0e4b8, #e4d7b6); /* Pastel yellow gradient */
+  background: linear-gradient(135deg, #f0e4b8, #e4d7b6); 
 }
 
-/* Style the back side */
 .flip-card-back {
-  color: black; /* Ensure text is black for readability */
+  color: black; 
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center contents vertically */
-  padding: 20px; /* Add padding around content */
-  text-align: left; /* Align text to the left */
+  justify-content: center; 
+  padding: 20px; 
+  text-align: left; 
 }
 
-/* Style for card-text */
-.flip-card-back h2{
-  transform: translateY(200%);
+.flip-card-back h2 {
+  transform: translateY(100%);
 }
+
 .flip-card-back .card-text {
-  margin-top: 0; /* Remove any margin at the top */
-  flex-grow: 1; /* Allow the text container to expand and take up available space */
+  margin-top: 0; 
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the text vertically */
-  text-align: left; /* Align the text to the left */
+  justify-content: center; 
+  text-align: left; 
   font-size: 110%;
   transition: 0.5s ease;
 }
 
-/* Button style */
 .btg {
   position: absolute;
-  bottom: 20px; /* Ajusta esta distancia según sea necesario */
+  bottom: 20px; 
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #f5a3a3, #f9c0c0); /* Gradiente pastel */
+  background: linear-gradient(135deg, #f5a3a3, #f9c0c0); 
   border: 3px solid #000000;
-  color: black; /* Color de texto negro para mejor visibilidad */
+  color: black; 
   padding: 10px 20px;
   border-radius: 10px;
-  text-decoration: none; /* Elimina el subrayado del texto */
+  text-decoration: none; 
   transition: background 0.3s ease, transform 0.3s ease;
 }
+
 .btg:hover {
-  background: linear-gradient(135deg, #a0b1ff, #b3c5ff); /* Nuevo gradiente pastel en hover */
+  background: linear-gradient(135deg, #a0b1ff, #b3c5ff); 
 }
 
-/* Add slight rotations and scales to each card */
 .flip-card-1,
 .flip-card-2,
 .flip-card-3,
 .flip-card-4 {
   transform: rotate(-5deg) scale(0.1);
+}
+
+/* Media Queries */
+
+/* Pantallas medianas (tablets, 768px a 991px) */
+@media (max-width: 991px) {
+  .flip-card {
+    width: 250px;
+    height: 400px;
+  }
+
+  .flip-card-back .card-text {
+    font-size: 100%;
+  }
+
+  .btg {
+    padding: 8px 16px;
+    font-size: 90%;
+  }
+}
+
+/* Pantallas pequeñas (móviles, 576px a 767px) */
+@media (max-width: 767px) {
+  .flip-card-container {
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .flip-card {
+    width: 200px;
+    height: 350px;
+  }
+
+  .flip-card-back .card-text {
+    font-size: 90%;
+  }
+
+  .btg {
+    padding: 7px 14px;
+    font-size: 85%;
+  }
+}
+
+/* Pantallas extra pequeñas (móviles pequeños, menos de 576px) */
+@media (max-width: 575px) {
+  .flip-card-container {
+    margin-top: 20px;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .flip-card {
+    width: 180px;
+    height: 300px;
+  }
+
+  .flip-card-back .card-text {
+    font-size: 85%;
+  }
+  .flip-card-back h2 {
+    font-size: 90%;
+  }
+  .btg {
+    padding: 6px 12px;
+    font-size: 80%;
+  }
 }

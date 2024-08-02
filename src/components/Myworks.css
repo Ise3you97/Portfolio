@@ -221,8 +221,9 @@ main {
 /* Para pantallas pequeñas (teléfonos móviles) */
 @media (max-width: 600px) {
   .card {
-    width: 250px; /* Reduce el tamaño de la tarjeta */
-    height: 400px; /* Reduce el tamaño de la tarjeta */
+    margin-top: 10%;
+    width: 200px; /* Reduce el tamaño de la tarjeta */
+    height: 350px; /* Reduce el tamaño de la tarjeta */
   }
 
   .card img {
@@ -242,6 +243,27 @@ main {
   .card-icon {
     font-size: 5em; /* Ajusta el tamaño del ícono */
   }
+  .animate-cards .card-back,
+  .animate-cards .card-2,
+  .animate-cards .card-3 {
+    animation: none;
+  }
+.card-back {
+
+  position: absolute;
+  margin: 0px 10px;
+  transform: translateX(100%) translateY(0) ;
+}
+.card-2 {
+  position: absolute;
+  margin-top: 10px;
+  transform: translateY(100%);
+}
+.card-3 {
+  position: absolute;
+  margin: 10px 10px;
+  transform:translateX(100%) translateY(100%);
+}
 }
 
 /* Para pantallas medianas (tabletas) */
@@ -294,4 +316,5 @@ main {
   .card-icon {
     font-size: 7em; /* Ajusta el tamaño del ícono */
   }
+ 
 }

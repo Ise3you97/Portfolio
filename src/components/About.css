@@ -1,4 +1,4 @@
-/* About card container with margin to adjust the position */
+/* Contenedor principal con margen ajustable para las tarjetas */
 .about-flip-card-container {
   margin-top: 100px; /* Ajusta este valor para mover las tarjetas más abajo */
   display: flex;
@@ -6,17 +6,23 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px; /* Espacio entre las tarjetas */
+  width: 100%;
+  box-sizing: border-box; /* Incluye el borde en el tamaño total del contenedor */
+  position: relative; /* Necesario para posicionar elementos absolutamente dentro del contenedor */
 }
 
+/* Estilo de las tarjetas */
 .about-flip-card {
-  width: 300px;
+  width: 100%;
+  max-width: 300px; /* Ancho máximo para las tarjetas */
   height: 500px;
-  border-radius: 15px; /* Rounded corners */
-  perspective: 1000px; /* 3D effect */
+  border-radius: 15px; /* Esquinas redondeadas */
+  perspective: 1000px; /* Efecto 3D */
   opacity: 0;
   transform: translateY(10px) scale(0.1);
   transition: opacity 2s ease-out, transform 1s ease-out;
 }
+
 .about-flip-card-back h1 {
   width: 100%; /* Asegura que el h1 ocupe todo el ancho disponible */
   text-align: center; /* Centra el título horizontalmente */
@@ -24,21 +30,16 @@
   color: black; /* Cambia el color del texto a negro */
 }
 
-.about-flip-card-back p {
-  width: 100%; /* Asegura que el párrafo ocupe todo el ancho disponible */
-  text-align: left; /* Alinea el párrafo a la izquierda */
-  margin: 0 20px; /* Añade un margen lateral para que no esté pegado al borde */
-  color: black; /* Cambia el color del texto a negro */
-
-}
-.about-flip-card-back li {
-  width: 100%; /* Asegura que el párrafo ocupe todo el ancho disponible */
-  text-align: left; /* Alinea el párrafo a la izquierda */
+.about-flip-card-back p, .about-flip-card-back li {
+  width: 100%; /* Asegura que el párrafo y la lista ocupen todo el ancho disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
   margin: 5px 20px; /* Añade un margen lateral para que no esté pegado al borde */
+  color: black; /* Cambia el color del texto a negro */
 }
+
 .about-flip-card .card-icon {
-  font-size: 5em; /* Adjust the size of the text or icon */
-  color: white; /* Paint text and icon white */
+  font-size: 5em; /* Ajusta el tamaño del texto o icono */
+  color: white; /* Colorea texto e icono de blanco */
 }
 
 .about-flip-card.visible {
@@ -46,19 +47,18 @@
   transform: translateY(0) scale(1);
 }
 
-/* Container for the front and back side with smooth transitions */
+/* Contenedor para las caras frontal y posterior con transiciones suaves */
 .about-flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   transition: transform 0.8s ease;
-  border-radius: 15px; /* Rounded corners */
+  border-radius: 15px; /* Esquinas redondeadas */
   transform-style: preserve-3d;
-  
 }
 
-/* Flip effect on hover */
+/* Efecto de flip al pasar el mouse */
 .about-flip-card:hover .about-flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -66,37 +66,38 @@
 .about-flip-card-front, .about-flip-card-back {
   position: absolute;
   width: 100%;
-  border: 5px solid #000000; /* Add border */
+  border: 5px solid #000000; /* Añadir borde */
   height: 100%;
-  border-radius: 15px; /* Rounded corners */
-  background: rgba(255, 255, 255, 1); /* Solid background */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para el efecto de profundidad */
+  border-radius: 15px; /* Esquinas redondeadas */
+  background: rgba(255, 255, 255, 1); /* Fondo sólido */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra interior para efecto de profundidad */
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensures no overflow of image */
+  overflow: hidden; /* Evita que el contenido se desborde */
 }
 
-/* Ensure images cover the entire card */
+/* Imágenes que cubren toda la tarjeta */
 .about-flip-card-front img, .about-flip-card-back img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 15px; /* Match rounded corners of card */
-  position: absolute; /* Ensures image covers the whole container */
-  top: 0; /* Position the image at the top of the container */
-  left: 0; /* Position the image at the left of the container */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+  border-radius: 15px; /* Coincide con las esquinas redondeadas de la tarjeta */
+  position: absolute; /* Asegura que la imagen cubra todo el contenedor */
+  top: 0;
+  left: 0;
 }
 
 .about-flip-card-1 .about-flip-card-front {
-  background: linear-gradient(135deg, #b2e5b1, #a3d9a5); /* Pastel green gradient for About Me */  
+  background: linear-gradient(135deg, #b2e5b1, #a3d9a5); /* Degradado verde pastel para "About Me" */  
 }
 
 .about-flip-card-2 .about-flip-card-front {
   background: linear-gradient(135deg, #b3c5ff, #a0b1ff);
 }
+
 .about-flip-card-3 .about-flip-card-front {
   background: linear-gradient(135deg, #f9c0c0, #f5a3a3); 
 }
@@ -104,7 +105,6 @@
 .about-flip-card-4 .about-flip-card-front {
   background: linear-gradient(135deg, #f0e4b8, #e4d7b6); 
 }
-
 
 .about-flip-card-back {
   display: flex;
@@ -115,10 +115,10 @@
   padding: 10%;
   padding-left: 3%;
   color: black; /* Cambia el color del texto a negro */
-  text-align: left; /* Opcional: centra el texto dentro de los elementos */
+  text-align: left;
 }
 
-
+/* Iconos de tecnologías con diseño responsive */
 .technologies-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22%, 1fr)); /* Ajusta el tamaño mínimo */
@@ -126,10 +126,7 @@
   width: 100%;
   justify-items: center;
 }
-.tech-icon:hover i{
-  color: red;
-  font-size: 2.5em;
-}
+
 .tech-icon {
   display: flex;
   flex-direction: column;
@@ -143,13 +140,17 @@
   transition: 0.5s ease;
 }
 
+.tech-icon:hover i {
+  color: red;
+  font-size: 2.5em;
+}
+
 .tech-icon p {
   margin-top: 2px; /* Reduce el espacio entre el icono y el texto */
   color: black; /* Cambia el color del texto debajo del icono */
-  text-align: center; /* Alinea el texto al centro */
-  width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+  text-align: center;
+  width: 100%;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra debajo del subrayado */
-
 }
 
 .about-flip-card-back ul {
@@ -161,7 +162,8 @@
 .about-flip-card-back li {
   margin-bottom: 4px;
 }
-/* Button style */
+
+/* Estilo del botón */
 .about-btg {
   margin: 0;
   position: absolute;
@@ -180,10 +182,62 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
+/* Media queries para diferentes tamaños de pantalla */
 
-/* new animated backGround */
-.about-flip-card-container{
-  width: 100%;
-  box-sizing: border-box; /* Incluye el borde en el tamaño total del contenedor */
-  position: relative; /* Necesario para posicionar los círculos absolutamente dentro de .App */
+/* Para tablets en orientación vertical y teléfonos en orientación horizontal */
+@media (max-width: 768px) {
+  .about-flip-card {
+    max-width: 250px; /* Reduce el ancho máximo de las tarjetas */
+    height: 450px; /* Reduce la altura de las tarjetas */
+  }
+
+  .about-flip-card-container {
+    gap: 15px; /* Reduce el espacio entre las tarjetas */
+    margin-top: 80px; /* Reduce el margen superior */
+  }
+
+  .technologies-icons {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    gap: 10px; /* Reduce el espacio entre los íconos */
+  }
+
+  .tech-icon i {
+    font-size: 1.8em; /* Reduce el tamaño de los íconos */
+  }
+}
+
+/* Para teléfonos móviles */
+@media (max-width: 480px) {
+  .about-flip-card {
+    max-width: 200px; /* Reduce aún más el ancho máximo de las tarjetas */
+    height: 400px; /* Reduce la altura de las tarjetas */
+  }
+
+  .about-flip-card-container {
+    gap: 10px; /* Reduce el espacio entre las tarjetas */
+    margin-top: 60px; /* Reduce el margen superior */
+    justify-content: center; /* Centra las tarjetas en la pantalla */
+  }
+
+  .technologies-icons {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    gap: 5px; /* Reduce el espacio entre los íconos */
+  }
+
+  .tech-icon i {
+    font-size: 1em; /* Reduce aún más el tamaño de los íconos */
+  }
+  .about-flip-card-back p{
+    width: 100%; /* Asegura que el párrafo y la lista ocupen todo el ancho disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 5px 0px; /* Añade un margen lateral para que no esté pegado al borde */
+    font-size: 0.7em;
+  }
+  .about-flip-card-back li{
+    width: 100%; /* Asegura que el párrafo y la lista ocupen todo el ancho disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 0.7em;
+  margin-bottom: 4px;
+  margin: 5px 20px; /* Añade un margen lateral para que no esté pegado al borde */
+  }
 }

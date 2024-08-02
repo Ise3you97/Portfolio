@@ -1,7 +1,8 @@
+/* Estilos base para .wrapper y .button */
 .wrapper{
-    background: linear-gradient(315deg, #fff 0%, #d7e1ec 74);
     transform: translateY(250%); /* Ajusta este valor según sea necesario */
 }
+
 .wrapper .button{
     display: flex;
     height: 60px;
@@ -14,14 +15,14 @@
     box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
     transition: all 0.3s ease-out;
     overflow: hidden;
-    position: relative; /* Ensure positioning context for span */
-    
-
+    position: relative;
 }
+
 .wrapper .button:hover{
     width: 200px;
     overflow: visible;
 }
+
 .wrapper .button .icon{
     display: inline-block;
     height: 60px;
@@ -30,8 +31,8 @@
     border-radius: 50px;
     box-sizing: border-box;
     line-height: 60px;
-
 }
+
 .wrapper .button:nth-child(1):hover .icon {
     background: #A2D9FF; /* Color pastel para Twitter */
 }
@@ -52,25 +53,117 @@
     background: #A2D9FF; /* Color pastel para LinkedIn */
 }
 
-
 .wrapper .button .icon i{
     font-size: 30px;
     line-height: 60px;
 }
+
 .wrapper .button span{
-    font-size:  20px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 60px;
     margin-left: 10px;   
-    opacity: 0; /* Hide text initially */
-    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0;
+    white-space: nowrap;
     transition: opacity 0.3s ease-out, margin-left 0.3s ease-out;
-    position: absolute; /* Position relative to .button */
-    left: 70px; /* Adjust according to your design */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center vertically */
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .wrapper .button:hover span{
     opacity: 1;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .wrapper .button {
+        margin: 0 50px;
+    }
+    
+    .wrapper .button:hover {
+        width: 180px;
+    }
+    
+    .wrapper .button span {
+        font-size: 18px;
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrapper .button {
+        margin: 0 30px;
+    }
+    
+    .wrapper .button:hover {
+        width: 160px;
+    }
+    
+    .wrapper .button span {
+        font-size: 16px;
+        margin-left: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        transform: translateY(200%);
+    }
+
+    .wrapper .button {
+        margin: 0 20px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    .wrapper .button:hover {
+        width: 140px;
+    }
+
+    .wrapper .button .icon {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+
+    .wrapper .button .icon i {
+        font-size: 25px;
+    }
+    
+    .wrapper .button span {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        transform: translateY(150%);
+    }
+
+    .wrapper .button {
+        margin: 0 10px;
+        height: 40px;
+        width: 40px;
+    }
+    
+    .wrapper .button:hover {
+        width: 120px;
+    }
+
+    .wrapper .button .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .wrapper .button .icon i {
+        font-size: 20px;
+    }
+    
+    .wrapper .button span {
+        font-size: 12px;
+        margin-left: 4px;
+    }
 }
