@@ -156,7 +156,7 @@
 @media (max-width: 767px) {
   .flip-card-container {
     margin-top: 30px;
-    gap: 15px;
+    gap: 20px;
   }
 
   .flip-card {

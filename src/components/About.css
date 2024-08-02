@@ -204,13 +204,19 @@
   .tech-icon i {
     font-size: 1.8em; /* Reduce el tamaño de los íconos */
   }
+  .tech-icon:hover i {
+    color: red;
+    font-size: 1.5em;
+  }
+  
 }
 
 /* Para teléfonos móviles */
 @media (max-width: 575px) {
   .about-flip-card {
     max-width: 200px; /* Reduce aún más el ancho máximo de las tarjetas */
-    height: 400px; /* Reduce la altura de las tarjetas */
+    height: 350px; /* Reduce la altura de las tarjetas */
+    display: flex;
   }
 
   .about-flip-card-container {
@@ -225,19 +231,19 @@
   }
 
   .tech-icon i {
-    font-size: 1em; /* Reduce aún más el tamaño de los íconos */
+    font-size: 0.8em; /* Reduce aún más el tamaño de los íconos */
   }
   .about-flip-card-back p{
     width: 100%; /* Asegura que el párrafo y la lista ocupen todo el ancho disponible */
     text-align: left; /* Alinea el texto a la izquierda */
     margin: 5px 0px; /* Añade un margen lateral para que no esté pegado al borde */
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
   .about-flip-card-back li{
     width: 100%; /* Asegura que el párrafo y la lista ocupen todo el ancho disponible */
   text-align: left; /* Alinea el texto a la izquierda */
-  font-size: 0.7em;
+  font-size: 0.65em;
   margin-bottom: 4px;
-  margin: 5px 20px; /* Añade un margen lateral para que no esté pegado al borde */
+  margin: 5px 15px; /* Añade un margen lateral para que no esté pegado al borde */
   }
 }

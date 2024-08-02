@@ -1,23 +1,51 @@
+/* Estilo base para el botón */
 .up-button {
-    display: none;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    width: 60px; /* Ajusta el tamaño del botón */
-    height: 60px; /* Ajusta el tamaño del botón para que sea igual al ancho */
-    background-color: hsl(40, 36%, 95%); /* Color pastel de fondo */
-    border-radius: 50%;
-    padding: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease-in-out;
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px; /* Tamaño del botón para pantallas grandes */
+  height: 60px; /* Tamaño del botón para pantallas grandes */
+  background-color: hsl(40, 36%, 95%); /* Color pastel de fondo */
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.up-button.show {
+  display: block;
+}
+
+.up-button i {
+  color: rgb(8, 8, 8);
+  font-size: 35px; /* Tamaño del ícono para pantallas grandes */
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  .up-button {
+    width: 50px; /* Ajusta el tamaño del botón */
+    height: 50px; /* Ajusta el tamaño del botón */
+    bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+    right: 30px; /* Ajusta la distancia desde la derecha */
   }
-  
-  .up-button.show {
-    display: block;
-  }
-  
+
   .up-button i {
-    color: rgb(8, 8, 8);
-    font-size: 35px;
+    font-size: 30px; /* Ajusta el tamaño del ícono */
   }
-  
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+  .up-button {
+    width: 40px; /* Ajusta el tamaño del botón */
+    height: 40px; /* Ajusta el tamaño del botón */
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+  }
+
+  .up-button i {
+    font-size: 25px; /* Ajusta el tamaño del ícono */
+  }
+}

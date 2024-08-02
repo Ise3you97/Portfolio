@@ -134,6 +134,10 @@
 
 /* Small screens (less than 600px) */
 @media (max-width: 600px) {
+.home2-container {
+  margin-bottom: 20%;
+}
+
   .home2-flip-card {
     width: 70%;
     height: 400px;

@@ -50,6 +50,7 @@ main {
 
 .card-container {
   position: relative; /* Para que las tarjetas se posicionen en relación a este contenedor */
+  border: 3px solid black;
 }
 
 .card {
@@ -222,8 +223,8 @@ main {
 @media (max-width: 600px) {
   .card {
     margin-top: 10%;
-    width: 200px; /* Reduce el tamaño de la tarjeta */
-    height: 350px; /* Reduce el tamaño de la tarjeta */
+    width: 180px; /* Reduce el tamaño de la tarjeta */
+    height: 300px; /* Reduce el tamaño de la tarjeta */
   }
 
   .card img {
@@ -233,7 +234,7 @@ main {
   }
 
   .card h2 {
-    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
   }
 
   .card p, .card a {
@@ -248,22 +249,23 @@ main {
   .animate-cards .card-3 {
     animation: none;
   }
-.card-back {
+  .card-container {
+    height: 120vh;
+  }
+ 
+  .card-back{
+    margin: 40px 10px;
+    transform: translateX(100%) translateY(0%);
+  }
+  .card-2{
+    margin: 50px 0px;
+    transform: translateX(0%) translateY(100%);
+  }
+  .card-3{
+    margin: 50px 10px;
+    transform: translateX(100%) translateY(100%);
 
-  position: absolute;
-  margin: 0px 10px;
-  transform: translateX(100%) translateY(0) ;
-}
-.card-2 {
-  position: absolute;
-  margin-top: 10px;
-  transform: translateY(100%);
-}
-.card-3 {
-  position: absolute;
-  margin: 10px 10px;
-  transform:translateX(100%) translateY(100%);
-}
+  }
 }
 
 /* Para pantallas medianas (tabletas) */
