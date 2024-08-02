@@ -153,7 +153,7 @@
 }
 
 /* Pantallas pequeñas (móviles, 576px a 767px) */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .flip-card-container {
     margin-top: 30px;
     gap: 15px;
