@@ -37,6 +37,53 @@
   font-size: 2rem; /* Ajusta el tamaño del texto según tus necesidades */
   color: #000000; /* Cambia el color del texto a blanco para contraste sobre el fondo negro */
 }
+/* src/components/Navigation.css */
+
+/* Estilo general para el Offcanvas */
+.offcanvas-custom {
+  --bs-offcanvas-width: 300px; /* Ajusta el ancho del Offcanvas */
+  width: 250px; /* Ancho del Offcanvas */
+  padding: 1rem; /* Espaciado interno del Offcanvas */
+}
+
+.offcanvas-custom {
+  background-color: #f7f7f704; /* Color de fondo del offcanvas */
+  padding: 0.5em 1rem;
+  color: #333; /* Color del texto */
+}
+
+/* Estilo para el encabezado del Offcanvas */
+.offcanvas-custom .offcanvas-header {
+  background-color: #e9ecef00; /* Color de fondo del header */
+  color: #333; /* Color del texto del header */
+}
+
+/* Estilo para el título del Offcanvas */
+.offcanvas-custom .offcanvas-title {
+  color: #f3f6f8; /* Color del título */
+}
+
+/* Estilo para el cuerpo del Offcanvas */
+.offcanvas-custom .offcanvas-body {
+  padding: 1rem; /* Espaciado dentro del offcanvas */
+}
+
+/* Estilo para los enlaces dentro del Offcanvas */
+.offcanvas-custom .nav-link {
+  color: #f7f8f8; /* Color de los enlaces */
+  padding-top: 3%;
+}
+
+.offcanvas-custom .nav-link.active {
+  color: #141414; /* Color del enlace activo */
+}
+
+/* Estilo para el botón de cierre del Offcanvas */
+.offcanvas-custom .btn-close {
+  color: white;
+  background-color: red;
+}
+
 body {
   padding-top: 0px; /* Ajusta este valor según la altura de tu navbar para evitar que el contenido quede oculto debajo de la barra de navegación */
 }

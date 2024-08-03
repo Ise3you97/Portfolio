@@ -55,7 +55,6 @@
 
 .wrapper .button .icon i{
     font-size: 30px;
-    line-height: 60px;
 }
 
 .wrapper .button span{
@@ -151,6 +150,7 @@
     
     .wrapper .button:hover {
         width: 120px;
+        overflow:hidden;      
     }
 
     .wrapper .button .icon {
@@ -160,10 +160,12 @@
 
     .wrapper .button .icon i {
         font-size: 20px;
+        line-height: 0%;
     }
     
     .wrapper .button span {
-        font-size: 12px;
-        margin-left: 4px;
+        font-size: 15px;
+        margin: 0 -24%;
+
     }
 }
