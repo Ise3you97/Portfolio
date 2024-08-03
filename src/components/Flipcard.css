@@ -137,6 +137,10 @@
 
 /* Pantallas medianas (tablets, 768px a 991px) */
 @media (max-width: 991px) {
+  .flip-card-container {
+    margin-top: 30%;
+  }
+
   .flip-card {
     width: 250px;
     height: 400px;

@@ -288,27 +288,68 @@ main {
 /* Para pantallas medianas (tabletas) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .card {
-    width: 275px; /* Ajusta el tamaño de la tarjeta */
-    height: 450px; /* Ajusta el tamaño de la tarjeta */
+    margin-top: 10%;
+    width: 150px; /* Reduce el tamaño de la tarjeta */
+    height: 260px; /* Reduce el tamaño de la tarjeta */
   }
 
   .card img {
-    width: 140px; /* Ajusta el tamaño de la imagen */
-    height: 140px;
-    top: 45px; /* Ajusta la distancia de la imagen */
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    height: 120px;
+    top: 30px; /* Ajusta la distancia de la imagen */
   }
 
   .card h2 {
-    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
   }
 
-  .card p, .card a {
-    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  .card p, .card a , .card h2{
+    font-size: 0.7rem; /* Ajusta el tamaño del texto */
+    color: white;
+    text-align: left;
+    margin: 0px 0px 0px -20px;
   }
 
   .card-icon {
-    font-size: 6em; /* Ajusta el tamaño del ícono */
+    font-size: 5em; /* Ajusta el tamaño del ícono */
   }
+  .animate-cards .card-back,
+  .animate-cards .card-2,
+  .animate-cards .card-3 {
+    animation: none;
+  }
+  .card-container {
+    margin: 0% 0% 0 25%;
+    height: 90vh;
+  }
+ 
+  .card-back{
+    margin: 0% 3%;
+    transform: translateX(100%) translateY(0%);
+  }
+  .card-2{
+    margin: 3% 0px;
+    transform: translateX(0%) translateY(100%);
+  }
+  .card-3{
+    margin: 3% 3%;
+    transform: translateX(100%) translateY(100%);
+
+  }
+  .card img {
+    position: absolute;
+    top: 0%; /* Alinea la imagen en la parte superior del contenedor */
+    left: 50%; /* Alinea la imagen a la izquierda del contenedor */
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover; /* Escala la imagen para cubrir el contenedor sin distorsión */
+    border-radius: 0%; /* Asegura que no haya bordes redondeados */
+    opacity: 0;
+    border: 0; /* Elimina cualquier borde */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra si es necesario */
+    transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
+  }
+  
 }
 
 /* Para pantallas grandes (escritorios) */

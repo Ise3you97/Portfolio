@@ -163,8 +163,9 @@
 
 /* Medium screens (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
+  
   .home2-flip-card {
-    width: 70%;
+    width: 40%;
     height: 420px;
   }
 
