@@ -94,8 +94,8 @@ function Myworks() {
             <span className="material-symbols-outlined"></span>
           </a>
         </div>
-
-        {/* Tarjeta 3 */}
+{/*
+        {/* Tarjeta 3 *
         <div className="card card-3">
           <i className="bi bi-suit-spade-fill card-icon-top-left"></i>
           <i className="bi bi-suit-spade-fill card-icon-bottom-right"></i>
@@ -111,6 +111,7 @@ function Myworks() {
             <span className="material-symbols-outlined"></span>
           </a>
         </div>
+      /*}
 
         {/* Tarjeta frontal */}
         <div className="card card-front">
