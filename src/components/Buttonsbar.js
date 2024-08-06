@@ -12,7 +12,7 @@ function Buttonsbar() {
           <span>Github</span>
         </div>
       </div>
-      <div className="button"  onClick={() => window.open('https://www.dropbox.com/scl/fi/yog89w097clfefdr0kxle/CV.pdf?rlkey=e8aadopkxxr1wvg44djk2pizh&st=ef13gndt&dl=0','_blank','noopener,noreferrer')}>
+      <div className="button"  onClick={() => window.open('https://www.dropbox.com/scl/fi/f1gjb06m3f2ex1xcodmy9/CV.pdf?rlkey=v031c3lxowxwonl57gnw0ayoh&st=cavs6kji&dl=0','_blank','noopener,noreferrer')}>
         <div className="icon">
           <i className="bi bi-download"></i>
           <span>Curriculum</span>
