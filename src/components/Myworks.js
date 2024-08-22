@@ -94,24 +94,31 @@ function Myworks() {
             <span className="material-symbols-outlined"></span>
           </a>
         </div>
-{/*
-        {/* Tarjeta 3 *
-        <div className="card card-3">
-          <i className="bi bi-suit-spade-fill card-icon-top-left"></i>
-          <i className="bi bi-suit-spade-fill card-icon-bottom-right"></i>
-          <div className="card-icon">
-            <i className="bi bi-code-slash"></i>
+
+        {
+          <div className="card card-3">
+            <img
+              src='https://dl.dropboxusercontent.com/scl/fi/30e3x8vfo4a5y54w6lutk/OIP.jpeg?rlkey=m9svqxxlmzh29tqmygy7u6liw&st=j4lol1cl&dl=0'
+              alt="Rain Runner"
+            />
+            <i className="bi bi-suit-spade-fill card-icon-top-left"></i>
+            <i className="bi bi-suit-spade-fill card-icon-bottom-right"></i>
+            <div className="card-icon">
+              <i className="bi bi-code-slash"></i>
+            </div>
+            <h2>
+              <strong>E-Commerce</strong>
+            </h2>
+            <p>
+              Here is a sample of a simple yet functional e-commerce that meets
+              the customer's needs.
+            </p>
+            <a href="https://e-commer-y64l.onrender.com/" className="button">
+              More Information
+              <span className="material-symbols-outlined"></span>
+            </a>
           </div>
-          <h2>
-            <strong>Web Site</strong>
-          </h2>
-          <p>loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
-          <a href="#" className="button">
-            More Information
-            <span className="material-symbols-outlined"></span>
-          </a>
-        </div>
-      /*}
+        }
 
         {/* Tarjeta frontal */}
         <div className="card card-front">
